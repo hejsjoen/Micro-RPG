@@ -1,3 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-Console.WriteLine("Hello, World!");
+﻿namespace RPG;
+public class Client
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Hello World!");
+        Game game = new Game();
+        game.Run();
+    }
+}
