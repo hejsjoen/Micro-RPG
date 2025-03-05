@@ -1,6 +1,6 @@
 namespace Micro_RPG.Enemy.Enemies;
 
-public class Bee : Enemy
+public class Bee : Character
 {
     private bool _hasPoisionSting;
 
@@ -9,7 +9,7 @@ public class Bee : Enemy
         _hasPoisionSting = hasPoisionSting;
     }
 
-    public override void Fight()
+    public override void Fight(Character target)
     {
         var rand = new Random();
         var i = rand.Next(10);

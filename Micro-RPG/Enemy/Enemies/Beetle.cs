@@ -1,6 +1,6 @@
 namespace Micro_RPG.Enemy.Enemies;
 
-public class Beetle : Enemy
+public class Beetle : Character
 {
     private int _roll;
     
@@ -18,7 +18,7 @@ public class Beetle : Enemy
         //if (CurrentItem != null) Console.Write($"They are carrying {CurrentItem.Name}\n");
     }
 
-    public override void Fight()
+    public override void Fight(Character target)
     {
         void Fly()
         {

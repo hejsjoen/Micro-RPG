@@ -2,7 +2,7 @@ using Micro_RPG.Inventory;
 
 namespace Micro_RPG.Enemy.Enemies;
 
-public class Ant : Enemy
+public class Ant : Character
 {
     private int _chargeDistance;
     private Item CurrentItem;
@@ -16,7 +16,7 @@ public class Ant : Enemy
         CurrentItem = item;
     }
 
-    public override void Fight()
+    public override void Fight(Character target)
     {
         var rand  = new Random();
         var i = rand.Next(10);
