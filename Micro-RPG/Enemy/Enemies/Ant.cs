@@ -1,9 +1,6 @@
-using System.Data;
-using System.Drawing;
-using System.Reflection.Metadata.Ecma335;
-using RPG.Inventory;
+using Micro_RPG.Inventory;
 
-namespace RPG.Enemy.Enemies;
+namespace Micro_RPG.Enemy.Enemies;
 
 public class Ant : Enemy
 {
@@ -18,23 +15,27 @@ public class Ant : Enemy
     {
         CurrentItem = item;
     }
-    
 
-    public void Charge()
+    public override void Fight()
     {
-        Console.BackgroundColor = Color;
-        Console.Write($" {Name} ");
-        Console.ResetColor();
-        Console.WriteLine($" charges swiftly forward {_chargeDistance}");
+        var rand  = new Random();
+        var i = rand.Next(10);
+        if (i > 7)
+        {
+            Console.BackgroundColor = Color;
+            Console.Write($" {Name} ");
+            Console.ResetColor();
+            Console.WriteLine($" charges swiftly forward {_chargeDistance}");
 
-        if (CurrentItem != null) Console.Write($"They are carrying {CurrentItem.Name}\n");
-    }
+            if (CurrentItem != null) Console.Write($"They are carrying {CurrentItem.Name}\n");
+        }
 
-    public void Bite()
-    {
-        Console.BackgroundColor = Color;
-        Console.Write($" {Name} ");
-        Console.ResetColor();
-        Console.WriteLine(" viciously chomps down!");
+        else
+        {
+            Console.BackgroundColor = Color;
+            Console.Write($" {Name} ");
+            Console.ResetColor();
+            Console.WriteLine(" viciously chomps down!");
+        }
     }
 }

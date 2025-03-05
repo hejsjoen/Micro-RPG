@@ -1,4 +1,4 @@
-namespace RPG.Inventory;
+namespace Micro_RPG.Inventory;
 
 public class Item
 {

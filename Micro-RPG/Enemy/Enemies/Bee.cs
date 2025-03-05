@@ -1,4 +1,4 @@
-namespace RPG.Enemy.Enemies;
+namespace Micro_RPG.Enemy.Enemies;
 
 public class Bee : Enemy
 {
@@ -9,21 +9,26 @@ public class Bee : Enemy
         _hasPoisionSting = hasPoisionSting;
     }
 
-    public void Fly()
+    public override void Fight()
     {
-        Console.BackgroundColor = Color;
-        Console.Write($" {Name} ");
-        Console.ResetColor();
-        Console.WriteLine(" takes the air!");
-    }
+        var rand = new Random();
+        var i = rand.Next(10);
+        if (i > 6)
+        {
+            Console.BackgroundColor = Color;
+            Console.Write($" {Name} ");
+            Console.ResetColor();
+            Console.WriteLine(" takes the air!");
+        }
 
-    public void Sting()
-    {
-        Console.BackgroundColor = Color;
-        Console.Write($" {Name} ");
-        Console.ResetColor();
-        Console.WriteLine(" lunges forward with their ");
-        if (_hasPoisionSting) Console.WriteLine("poison stinger!");
-        else Console.WriteLine("sharp sting!");
+        else
+        {
+            Console.BackgroundColor = Color;
+            Console.Write($" {Name} ");
+            Console.ResetColor();
+            Console.Write(" lunges forward with their ");
+            if (_hasPoisionSting) Console.WriteLine("poison stinger!");
+            else Console.WriteLine("sharp sting!");
+        }
     }
 }

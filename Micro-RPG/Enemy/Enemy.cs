@@ -1,4 +1,6 @@
-namespace RPG.Enemy;
+using System.IO.MemoryMappedFiles;
+
+namespace Micro_RPG.Enemy;
 
 public class Enemy
 {
@@ -22,5 +24,15 @@ public class Enemy
         Console.WriteLine($"Health: {Health}");
         Console.WriteLine($"---");
         Console.ResetColor();
+    }
+
+    public virtual void Fight()
+    {
+        Console.WriteLine("Enemy is fighting...");
+    }
+
+    public virtual void Defence()
+    {
+        Console.WriteLine("Enemy is defending...");
     }
 }
