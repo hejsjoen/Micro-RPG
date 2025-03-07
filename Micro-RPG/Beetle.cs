@@ -1,13 +1,14 @@
-namespace Micro_RPG.Enemy.Enemies;
+namespace Micro_RPG;
 
 public class Beetle : Character
 {
-    private int _roll;
-    
+    private readonly int _roll;
+
     public Beetle(string name, int health, ConsoleColor color, int roll) : base(name, health, color, ArtAssets.Beetle)
     {
         _roll = roll;
     }
+
     public void Roll()
     {
         Console.BackgroundColor = Color;
@@ -27,6 +28,7 @@ public class Beetle : Character
             Console.ResetColor();
             Console.WriteLine(" flies!");
         }
+
         Fly();
     }
 }

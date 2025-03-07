@@ -1,12 +1,12 @@
-using Micro_RPG.Inventory;
-
-namespace Micro_RPG.Enemy.Enemies;
+namespace Micro_RPG;
 
 public class Ant : Character
 {
-    private int _chargeDistance;
+    private readonly int _chargeDistance;
     private Item CurrentItem;
-    public Ant(string name, int health, ConsoleColor color, int chargeDistance) : base(name, health, color, ArtAssets.Ant)
+
+    public Ant(string name, int health, ConsoleColor color, int chargeDistance) : base(name, health, color,
+        ArtAssets.Ant)
     {
         _chargeDistance = chargeDistance;
     }
@@ -18,7 +18,7 @@ public class Ant : Character
 
     public override void Fight(Character target)
     {
-        var rand  = new Random();
+        var rand = new Random();
         var i = rand.Next(10);
         if (i > 7)
         {

@@ -1,14 +1,13 @@
-namespace Micro_RPG.Character;
+namespace Micro_RPG;
 
-public class Player : Enemy.Character
+public class Player : Character
 {
-    public Player(string name, int health, ConsoleColor color) 
+    public Player(string name, int health, ConsoleColor color)
         : base(name, health, color, ArtAssets.Player)
     {
-        
     }
 
-    public override void Fight(Enemy.Character target)
+    public override void Fight(Character target)
     {
         Console.ForegroundColor = Color;
         Console.WriteLine($"Player {Name} attacks {target.Name}.");

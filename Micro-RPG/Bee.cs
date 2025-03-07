@@ -1,10 +1,11 @@
-namespace Micro_RPG.Enemy.Enemies;
+namespace Micro_RPG;
 
 public class Bee : Character
 {
-    private bool _hasPoisionSting;
+    private readonly bool _hasPoisionSting;
 
-    public Bee(string name, int health, ConsoleColor color, bool hasPoisionSting) : base  (name, health, color,ArtAssets.Bee)
+    public Bee(string name, int health, ConsoleColor color, bool hasPoisionSting) : base(name, health, color,
+        ArtAssets.Bee)
     {
         _hasPoisionSting = hasPoisionSting;
     }

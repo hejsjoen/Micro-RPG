@@ -1,6 +1,6 @@
 namespace Micro_RPG;
 
-static class ArtAssets
+internal static class ArtAssets
 {
     public static string Bee = @"              \     /
           \    o ^ o    /
@@ -117,5 +117,4 @@ _/ \_";
             __/   /__,-'    ),'  |'
            ((__.-'((____..-' \__,'  Felix Lee <flee@cse.psu.edu>
 ";
-
 }
